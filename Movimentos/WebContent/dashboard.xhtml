@@ -1,0 +1,43 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<ui:composition template="/layout/template.xhtml">
+	<ui:define name="pageTitle">
+		<h:outputText value="Importação de dados" />
+	</ui:define>
+
+	<ui:define name="content">
+
+		<h:form style="width:900px">
+			<h:panelGrid style="width:100%">
+
+				<p:chart type="bar" model="#{graficosMB.animatedModel2}"
+					style="width:900px;" />
+			</h:panelGrid>
+			<h:panelGrid columns="2" style="width:100%">
+
+				<p:panel id="Resultado1" header="Filial que mais vendeu">
+					<h:outputText value="#{resultadoMB.resultado.maisVendeu}" />
+				</p:panel>
+				<p:panel id="Resultado2"
+					header="Filial que teve o maior crescimento">
+					<h:outputText value="#{resultadoMB.resultado.maiorCrescimento}" />
+				</p:panel>
+				<p:panel id="Resultado3" header="Filial que teve a maior queda">
+					<h:outputText value="#{resultadoMB.resultado.maiorQueda}" />
+				</p:panel>
+				<p:panel id="Resultado4" header="Mês de maior faturamento">
+					<h:outputText value="#{resultadoMB.resultado.mesMaiorVenda}" />
+				</p:panel>
+
+
+			</h:panelGrid>
+
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

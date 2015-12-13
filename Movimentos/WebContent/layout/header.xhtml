@@ -1,0 +1,22 @@
+<ui:fragment xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	<h1>
+		<h:outputText value="Movimento" />
+	</h1>
+
+<h:form>  
+	<p:growl id="messages"/>
+	<p:menubar id="menu_principal">
+		<p:submenu label="Importação" icon="ui-icon-contact">
+            <p:menuitem value="Importar TXT" url="/importar.jsf" />
+            <p:menuitem value="Dashboard" url="/dashboard.jsf" />
+ 		</p:submenu>
+    </p:menubar>
+    <p:sticky target="menu_principal" />
+</h:form>
+
+</ui:fragment>
